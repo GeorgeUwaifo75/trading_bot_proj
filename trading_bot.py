@@ -4,7 +4,6 @@ from lumibot.backtesting import YahooDataBacktesting
 from lumibot.strategies import Strategy
 from lumibot.traders import Trader
 from datetime import datetime
-#from alpaca-trade-api import REST
 from alpaca_trade_api.rest import REST, TimeFrame
 from timedelta import Timedelta
 from finbert_utils import estimmate_sentiment
@@ -12,8 +11,8 @@ from finbert_utils import estimmate_sentiment
 from google.colab import userdata
 load_dotenv()
 
-API_KEY = userdata.get('API_KEY')
-SECRET_KEY = userdata.get('SECRET_KEY')
+#API_KEY = userdata.get('API_KEY')
+#SECRET_KEY = userdata.get('SECRET_KEY')
 
 BASE_URL = "https://paper-api.alpaca.markets"
 
