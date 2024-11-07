@@ -87,8 +87,10 @@ class MLTrader(Strategy):
   def on_trading_iteration(self):
     cash, last_price, quantity = self.position_sizing()
     probability, sentiment = self.get_sentiment()
-    #news = self.get_sentiment()
-    #print(news)
+    
+    st.write("Sentiment: ",sentiment)
+    st.write("Probability: ",probability)
+    
     if cash > last_price:
           if sentiment == "positive" and probability>.999:
                 if self.last_trade == "sell":
