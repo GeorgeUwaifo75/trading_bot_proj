@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from lumibot.brokers import Alpaca
 from lumibot.backtesting import YahooDataBacktesting
 from lumibot.strategies import Strategy
@@ -9,6 +10,8 @@ from timedelta import Timedelta
 from finbert_utils import estimmate_sentiment
 
 from google.colab import userdata
+load_dotenv()
+
 API_KEY = userdata.get('API_KEY')
 SECRET_KEY = userdata.get('SECRET_KEY')
 
