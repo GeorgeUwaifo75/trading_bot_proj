@@ -1,3 +1,4 @@
+import streamlit as st
 from dotenv import load_dotenv
 from lumibot.brokers import Alpaca
 from lumibot.backtesting import YahooDataBacktesting
@@ -11,6 +12,8 @@ from finbert_utils import estimmate_sentiment
 from google.colab import userdata
 load_dotenv()
 
+st.header("Trading Master")
+
 #API_KEY = userdata.get('API_KEY')
 #SECRET_KEY = userdata.get('SECRET_KEY')
 
@@ -20,8 +23,8 @@ BASE_URL = "https://paper-api.alpaca.markets"
 #start_date = datetime(2021, 1, 1)
 #end_date = datetime(2021, 12, 30)
 
-start_date = datetime(2020,1,1)
-end_date = datetime(2023,12,31) 
+start_date = datetime(2022,1,1)
+end_date = datetime(2022,12,31) 
 
 
 ALPACA_CREDS ={
